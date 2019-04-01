@@ -1,0 +1,43 @@
+git init: Decir a git que se va a comenzar un proyecto nuevo.
+git add <file>: Pasar los archivos del 'Working directory' al 'Staging area'.
+git status: Ver los estados de los archivos, si se encuentran en el 'Working directory' o 'Staging area'.
+git commit: Pasar los archivos del 'Staging area' al 'Repository' (Crear un snapshot).
+git push: Subir archivos a un respositorio remoto para que los otros desarrolladores puedan recibir los cambios.
+git pull: Traer los cambios que se realizaron por los otros desarrolladores.
+git clone: Hacer una copia desde el servidor central.
+
+//Inicio de proyecto y agregar archivos al respositorio.
+
+1 - git init
+2 - git config --global user.email "asd@asd"
+3 - git config --global user.name "qwe" 
+4 - git status -> git add src/ (git add . **Agregar todo**)-> git add public/
+5 - git commit -m "mensaje" (-> i(para escribir) -> nombre_commit -> Esc -> :wq **Si no tiene -m**)
+6 - git log (Me da un hash para diferenciar los commit con sus respectivos datos).
+
+//Eliminar cambios hasta el ultimo commit.
+
+1 - git checkout -- <archivo>
+
+//Ver las diferencias entre el ultimo archivo guardado y el nuevo.
+
+1 - git diff <archivo>
+
+//Crear versiones alternativas del proyecto.
+
+* - git branch (para ver las versiones) 
+1 - git branch <nombre>
+2 - git checkout <nombre>
+
+//Subir a github
+
+1 - git remote add origin http://github...
+2 - git push -u origin master
+
+//Clonar un proyecto de github
+
+1 - git clone http://github...
+
+//Traer los cambios de la rama principal
+
+1 - git pull origin master (git fetch -> git merge FETCH_HEAD)
